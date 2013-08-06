@@ -1,0 +1,118 @@
+/**
+ * Body
+ */
+
+body
+  font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif;
+  font-size: 16px;
+
+/**
+ * Headers
+ */
+
+
+h1, h2, h3, h4, h5
+  color: #222
+  line-height: 1.1em
+
+h2, h3, h4, h5
+  font-weight: 700;
+  margin-bottom: 1.25em
+
+h1
+  font-size: 34px;
+  font-weight: 900;
+  margin-bottom: .5em;
+
+h2
+  font-size: 24px;
+
+h3
+  font-size: 18px
+
+/**
+ * Paragraph
+ */
+
+h1 + p,
+.content > p:first-child
+  font-size: 1.2em;
+  line-height: 1.4em;
+
+p
+  line-height: 1.5em;
+  color: #444;
+  margin-bottom: 1.5em;
+
+/**
+ * Elements
+ */
+
+p > img, p > a > img
+  max-width: 100%
+  display: block
+  margin: 0 auto
+  background: none
+  text-decoration: none
+
+a
+  color: #222
+  text-decoration: none
+  border-bottom: 1px solid dotted;
+  transition: color .25s ease-in-out;
+
+  &:hover
+    color: #01B0F0
+
+abbr
+  font-variant: small-caps;
+  text-transform: lowercase;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+
+em
+  font-style: italic;
+
+strong
+  font-weight: bold
+
+blockquote
+  border-left: 6px solid #01B0F0
+  padding: 8px 0 10px 15px
+  margin-bottom: 1.5em
+
+  p
+    margin-bottom: 0
+
+/**
+ * Syntax
+ */
+
+code
+  font-family: monospace, serif;
+  font-size: 0.875em;
+
+pre
+  display: block;
+  margin: 0.75em 0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  padding: 0.75em;
+
+pre + p
+  margin-top: 1.5em;
+
+
+/**
+ * Ligature
+ */
+
+.lsf, .lsf-icon:before
+    font-family: 'ligature'
+    text-rendering: optimizeLegibility
+    font-smoothing: antialiased
+
+.lsf-icon:before
+    content: attr(title)
+    margin-right: .3em
+    font-size: 130%

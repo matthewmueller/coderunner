@@ -1,0 +1,15 @@
+{
+  "name" : "base",
+  "version" : "0.0.1",
+  "description" : "base assets, eventually moved into own components",
+  "styles" : [
+    "reset.styl",
+    "type.styl",
+    "table.styl",
+    "github.css",
+    "clearfix.css"
+  ],
+  "dependencies": {
+    "matthewmueller/ligature-symbols": "*"
+  }
+}

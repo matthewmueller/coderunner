@@ -1,0 +1,10 @@
+{
+  "name": "layout",
+  "version" : "0.0.1",
+  "description": "layout",
+  "main" : "layout.js",
+  "scripts" : ["layout.js"],
+  "styles": [
+    "layout.styl"
+  ]
+}

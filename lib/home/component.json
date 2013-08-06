@@ -1,0 +1,25 @@
+{
+  "name": "home",
+  "version" : "0.0.1",
+  "description": "home",
+  "main" : "home.js",
+  "scripts" : [ "home.js" ],
+  "styles" : [ "home.styl" ],
+  "dependencies": {
+    "visionmedia/superagent": "*",
+    "visionmedia/page.js": "*",
+    "ianstormtaylor/history": "*",
+    "matthewmueller/terminal": "*",
+    "component/classes": "*",
+    "component/trim": "*",
+    "matthewmueller/ligature-symbols": "*",
+    "component/event": "*",
+    "ianstormtaylor/history": "*"
+  },
+  "local": [
+    "io",
+    "editor",
+    "container",
+    "script"
+  ]
+}

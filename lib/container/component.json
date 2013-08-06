@@ -1,0 +1,10 @@
+{
+  "name": "container",
+  "version": "0.0.1",
+  "description": "create containers",
+  "main": "container.js",
+  "scripts": ["container.js"],
+  "dependencies": {
+    "visionmedia/superagent": "*"
+  }
+}

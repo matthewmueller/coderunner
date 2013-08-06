@@ -1,0 +1,57 @@
+#main
+  float: left
+  display: inline-block
+  position: relative
+  height: 60%
+  width: 100%
+
+#tray
+  position: absolute
+  bottom: 10px
+  right: 10px
+
+#terminal
+  float: right
+  border-top: 2px solid #000f14
+  border-left: none
+  background: rgb(0, 40, 51);
+  width: 100%
+  height: 40%
+
+#top-right
+  position: absolute
+  top: 5px
+  right: 12px
+  color: #ddd
+  z-index: 1000
+
+#bottom-right
+  position: absolute
+  bottom: 5px
+  right: 12px
+  color: #ddd
+  z-index: 1000
+
+i.lsf.play
+  font-size: 250%
+  cursor: pointer
+
+  &:hover
+    color: #666
+
+  &:active, &.running
+    color: #002833
+
+
+@media all and (min-width: 1201px)
+  #main
+    height: 100%;
+    width: 50%
+  #terminal
+    width: 50%
+    height: 100%
+    border-top: none
+    border-left: 2px solid #000f14
+
+
+

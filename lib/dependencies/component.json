@@ -1,0 +1,7 @@
+{
+  "name": "dependencies",
+  "version": "0.0.1",
+  "description": "dependency parser",
+  "main": "dependencies.js",
+  "scripts": ["dependencies.js"]
+}

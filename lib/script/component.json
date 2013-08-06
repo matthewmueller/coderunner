@@ -1,0 +1,13 @@
+{
+  "name": "script",
+  "version": "0.0.1",
+  "description": "script model",
+  "main": "model.js",
+  "scripts": ["model.js"],
+  "dependencies": {
+    "modella/modella" : "*",
+    "modella/ajax": "*",
+    "forbeslindesay/is-browser" : "*",
+    "component/model-timestamps" : "*"
+  }
+}

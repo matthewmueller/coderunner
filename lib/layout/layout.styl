@@ -1,0 +1,43 @@
+/**
+ * Prevent lion-elasticity
+ */
+
+html
+  overflow: hidden
+
+body
+  overflow: auto
+
+/**
+ * Inputs
+ */
+
+input
+  margin: 5px 0
+
+  &:last-child
+    margin-bottom: 0
+
+  &[type=text], &[type=password]
+    height: 30px
+    width: 100%
+    border: 2px solid #ccc
+    outline: none
+    padding: 10px
+
+    &:focus
+      transition: border-color .25s ease-in-out;
+      border-color: #2FAEFC
+
+  &[type=submit]
+    border: none
+    padding: 7px 10px
+    text-shadow: 1px 1px #007ac8
+    color: white
+    background: #ccc
+    text-shadow: 1px 1px #aaa
+
+    // &.can-submit
+    background: #2FAEFC
+    cursor: pointer
+    text-shadow: 1px 1px #007ac8

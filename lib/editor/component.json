@@ -1,0 +1,25 @@
+{
+  "name": "editor",
+  "description": "editor",
+  "main": "editor.js",
+  "scripts": [
+    "editor.js"
+  ],
+  "styles": ["editor.styl"],
+  "templates": ["template.jade"],
+  "dependencies": {
+    "benatkin/codemirror": "*",
+    "benatkin/codemirror-mode-javascript": "*",
+    "matthewmueller/debounce": "*",
+    "component/emitter": "*",
+    "component/events": "*",
+    "component/trim": "*",
+    "ianstormtaylor/history": "*",
+    "visionmedia/superagent": "*"
+  },
+  "local": [
+    "acorn",
+    "dependencies",
+    "script"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "automon",
+  "version": "0.0.1",
+  "paths": [
+    "lib"
+  ],
+  "local": [
+    "base",
+    "layout",
+    "home"
+  ]
+}

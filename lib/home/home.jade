@@ -1,0 +1,13 @@
+extends ../layout/layout
+
+append scripts
+  if (script)
+    script window.script = !{script};
+  script require('home')
+
+block content
+  #main
+    #bottom-right
+      i.lsf.play play
+  #tray
+  #terminal

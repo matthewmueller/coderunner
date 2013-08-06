@@ -1,1 +1,7 @@
-scripts
+build
+data
+components
+node_modules
+logs
+pids
+.vagrant
