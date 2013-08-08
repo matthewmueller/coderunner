@@ -24,7 +24,7 @@ minify-js: build/build.js
 	mv $<.tmp $<
 
 clean:
-	rm -fr components node_modules
+	rm -fr components node_modules build
 
 production:
 	@git pull origin master

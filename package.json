@@ -28,6 +28,7 @@
     "connect-leveldb2": "~0.1.2",
     "request": "~2.25.0",
     "jade": "~0.34.1",
-    "io-server": "0.0.4"
+    "io-server": "0.0.4",
+    "extend.js": "0.0.1"
   }
 }

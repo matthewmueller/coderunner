@@ -6,15 +6,13 @@ var port = process.argv[2] || 8080;
 var express = require('express');
 var app = module.exports = express();
 var Session = require('connect-leveldb2')(express);
-var home = process.env.HOME;
+var config = require('config');
 
 /**
- * Add the NODE_PATH
+ * Project path
  */
 
-if (!process.env.NODE_PATH) {
-  process.env.NODE_PATH = 'lib';
-}
+process.env.PROJECT_PATH = __dirname;
 
 /**
  * Configuration
@@ -42,8 +40,9 @@ app.use(require('container'));
  * Session support
  */
 
+var dbdir = config('db path');
 var session = new Session({
-  dbLocation: home + '/data/sessions',
+  dbLocation: dbdir + 'sessions',
   ttl : 60 * 60 // 1hr
 });
 
