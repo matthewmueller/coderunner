@@ -61,7 +61,8 @@ Vagrant.configure("2") do |config|
 
     # Install global dependencies
     pkg_cmd << "npm install -g component;" \
-      "npm install -g node-gyp;"
+      "npm install -g node-gyp;" \
+      "npm install -g node-dev;"
 
     # Activate new kernel
     pkg_cmd << "shutdown -r +1; "
