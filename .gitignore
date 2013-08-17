@@ -1,4 +1,5 @@
 build
+!lib/build
 data
 components
 node_modules

@@ -1,0 +1,16 @@
+#!/usr/bin/env node
+
+/**
+ * Module Dependencies
+ */
+
+var build = require('./').build;
+
+/**
+ * Build
+ */
+
+build(function(e) {
+  if (e) process.stderr.write(e);
+  else process.stdout.write('successfully built components\n');
+});
