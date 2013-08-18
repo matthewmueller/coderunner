@@ -5,14 +5,23 @@
 var port = process.argv[2] || 8080;
 var express = require('express');
 var app = module.exports = express();
+var server = require('http').createServer(app);
 var Session = require('connect-leveldb2')(express);
+var engine = require('engine.io');
+var IO = require('io-server');
 var config = require('config');
 
 /**
- * Project path
+ * Set up engine.io
  */
 
-process.env.PROJECT_PATH = __dirname;
+var es = new engine.Server();
+
+server.on('upgrade', function(req, socket, head) {
+  es.handleUpgrade(req, socket, head);
+});
+
+es.on('connection', IO);
 
 /**
  * Configuration
@@ -20,6 +29,7 @@ process.env.PROJECT_PATH = __dirname;
 
 app.use(express.favicon());
 app.use(express.bodyParser());
+app.use('/engine.io', es.handleRequest.bind(es));
 
 app.configure('production', function() {
   app.use(express.compress());
@@ -63,6 +73,8 @@ app.use(function(req, res, next) {
  */
 
 app.use(require('script/api'));
+// IO.on('install', require('install'));
+IO.on('run', require('run'));
 app.use(require('home'));
 
 /**
@@ -84,7 +96,7 @@ app.configure('production', function() {
  * Listen
  */
 
-var server = app.listen(port, function() {
+server.listen(port, function() {
   console.log('listening on port %s', port);
 });
 

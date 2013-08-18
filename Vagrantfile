@@ -15,17 +15,17 @@ Vagrant.configure("2") do |config|
 
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,
-  # accessing "localhost:8080" will access port 80 on the guest machine.
-  config.vm.network :forwarded_port, guest: 8080, host: 8080
+  # accessing "localhost:9001" will access port 80 on the guest machine.
+  config.vm.network :forwarded_port, guest: 9001, host: 9001
 
   # Add a private network for nfs
-  config.vm.network :private_network, ip: " 192.168.1.110"
+  # config.vm.network :private_network, ip: " 192.168.1.110"
 
   # Share an additional folder to the guest VM. The first argument is
   # the path on the host to the actual folder. The second argument is
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
-  # config.vm.synced_folder ".", "/vagrant", :nfs => true
+  # config.vm.synced_folder ".", "/vagrant"
 
   # Install docker on ubuntu 12.04
   # Provision docker and new kernel if deployment was not done
@@ -53,6 +53,9 @@ Vagrant.configure("2") do |config|
         "echo 'Installation of VBox Guest Additions is proceeding in the background.'; " \
         "echo '\"vagrant reload\" can be used in about 2 minutes to activate the new guest additions.'; "
     end
+
+    # Install git
+    pkg_cmd << "apt-get install -y git;"
 
     # Install node.js dependencies
     pkg_cmd << "apt-get install -y make python g++;" \

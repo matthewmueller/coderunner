@@ -3,7 +3,8 @@
   "description": "editor",
   "main": "editor.js",
   "scripts": [
-    "editor.js"
+    "editor.js",
+    "script.js"
   ],
   "styles": ["editor.styl"],
   "templates": ["template.jade"],
@@ -20,6 +21,7 @@
   "local": [
     "acorn",
     "dependencies",
-    "script"
+    "script",
+    "io"
   ]
 }
