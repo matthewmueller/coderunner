@@ -54,6 +54,9 @@ Vagrant.configure("2") do |config|
         "echo '\"vagrant reload\" can be used in about 2 minutes to activate the new guest additions.'; "
     end
 
+    # Install git
+    pkg_cmd << "apt-get install -y git;"
+
     # Install node.js dependencies
     pkg_cmd << "apt-get install -y make python g++;" \
       "apt-get install -y curl;" \
