@@ -29,7 +29,7 @@ run    cd /src; npm install
 env    NODE_PATH lib
 env    HOME /home
 
-# Expose port 80
+# Expose public port 49100 => private port 80
 expose 80
 
 # Start webserver

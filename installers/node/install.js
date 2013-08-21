@@ -2,6 +2,8 @@
  * Module dependencies
  */
 
+var home = process.env.HOME;
+var spawn = require('child_process').spawn;
 
 /**
  * Expose `install`
@@ -24,5 +26,22 @@ function Install(dep, io) {
  */
 
 Install.prototype.install = function(dep) {
-  console.log('installing dependency: %s', dep);
+  var self = this;
+  var npm = spawn('npm', ['install', '-s', dep], {
+    stdio: ['ignore', 'pipe', 'pipe'],
+    cwd: home  
+  });
+
+  npm.stdout.on('data', function(stdout) {
+    self.io.emit('stdout', stdout.toString());
+  });
+
+  npm.stderr.on('data', function(stderr) {
+    self.io.emit('stderr', stderr.toString());
+  });
+
+  npm.on('close', function(code) {
+    if (code !== 0) self.io.emit('error', new Error('npm install exited with ' + code));
+    else self.io.emit('installed', dep);
+  });
 };

@@ -72,9 +72,12 @@ app.use(function(req, res, next) {
  * Mount
  */
 
+// TODO: is this even necessary anymore?
 app.use(require('script/api'));
-// IO.on('install', require('install'));
+
+IO.on('install', require('install'));
 IO.on('run', require('run'));
+
 app.use(require('home'));
 
 /**
