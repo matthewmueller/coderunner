@@ -2,12 +2,14 @@
  * Module Dependencies
  */
 
-var express = require('express'),
-    engine = require('engine.io'),
-    IO = require('io-server'),
-    app = express(),
-    es = new engine.Server(),
-    server = require('http').createServer(app);
+var args = process.argv.slice(2);
+var port = args[0] || 80;
+var express = require('express');
+var engine = require('engine.io');
+var IO = require('io-server');
+var app = express();
+var es = new engine.Server();
+var server = require('http').createServer(app);
 
 /**
  * Handle the upgrade
@@ -44,5 +46,5 @@ IO.on('install', require('./install'));
  * Bind to port
  */
 
-server.listen(80);
-console.log('Server started on port 80');
+server.listen(port);
+console.log('Server started on port', port);

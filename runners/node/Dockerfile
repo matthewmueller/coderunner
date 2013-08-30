@@ -16,7 +16,5 @@ run    curl http://nodejs.org/dist/v0.10.13/node-v0.10.13-linux-x64.tar.gz | tar
 # Entry entrypoint
 entrypoint    ["node"]
 
-run    mkdir /home/node_modules
-
 # add a default
 cmd    ["--help"]

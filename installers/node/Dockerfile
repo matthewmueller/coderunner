@@ -20,7 +20,7 @@ run    curl http://nodejs.org/dist/v0.10.13/node-v0.10.13-linux-x64.tar.gz | tar
 add    . /src
 
 # Add node_modules to the volume
-volume ["/home/node_modules"]
+volume ["/node_modules"]
 
 # Setup
 run    cd /src; npm install
