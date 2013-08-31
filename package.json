@@ -31,6 +31,7 @@
     "io-server": "0.0.4",
     "extend.js": "0.0.1",
     "engine.io": "~0.6.3",
-    "axon": "~0.6.1"
+    "axon": "~0.6.1",
+    "shell-escape": "0.0.1"
   }
 }

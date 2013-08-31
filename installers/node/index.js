@@ -2,49 +2,44 @@
  * Module Dependencies
  */
 
+var debug = require('debug')('coderunner:node:installer');
 var args = process.argv.slice(2);
-var port = args[0] || 80;
-var express = require('express');
-var engine = require('engine.io');
-var IO = require('io-server');
-var app = express();
-var es = new engine.Server();
-var server = require('http').createServer(app);
+var port = args[0] || 3000;
+var exec = require('child_process').exec;
+var axon = require('axon');
+var escape = require('shell-escape');
+var home = process.env.HOME;
 
 /**
- * Handle the upgrade
+ * Set up the response socket
  */
 
-server.on('upgrade', function(req, socket, head) {
-  es.handleUpgrade(req, socket, head);
-});
+var rep = axon
+  .socket('rep')
+  .format('json')
+  .connect(port);
+
+console.log('listening on port: %s', port);
 
 /**
- * Configuration
+ * Listen for a dependency
  */
 
-app.configure(function() {
-  app.use(express.logger('dev'));
-  app.use(express.query());
-  app.use('/engine.io', es.handleRequest.bind(es));
-  app.use(express.errorHandler());
-});
+rep.on('message', install); 
 
 /**
- * Handle the connection
+ * Install the dependency
  */
 
-es.on('connection', IO);
+function install(dep, reply) {
+  var self = this;
+  var cmd = escape(['npm', 'install', '-s', dep]);
 
-/**
- * Routing
- */
+  debug('installing %s', dep);
 
-IO.on('install', require('./install'));
-
-/**
- * Bind to port
- */
-
-server.listen(port);
-console.log('Server started on port', port);
+  // install the dependency
+  exec(cmd, { cwd: home }, function(err, stdout, stderr) {
+    debug('executed npm, err: %s, stdout: %s, stderr: %s', err, stdout, stderr);
+    reply(err, stdout, stderr);
+  });
+}

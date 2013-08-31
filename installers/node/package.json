@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "private": "true",
   "dependencies": {
-    "io-server": "0.0.4",
-    "express": "~3.3.5",
-    "engine.io": "~0.6.3"
+    "shell-escape": "0.0.1",
+    "debug": "~0.7.2",
+    "axon": "~0.6.1"
   }
 }

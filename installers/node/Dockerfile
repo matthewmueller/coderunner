@@ -30,8 +30,8 @@ env    NODE_PATH lib
 env    HOME /home
 
 # Expose public port 49100 => private port 80
-expose 80
+# expose 3000:3000
 
 # Start webserver
-cmd ["node", "/src/index.js", "80"]
+cmd ["node", "/src/index.js", "3000"]
 
