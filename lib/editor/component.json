@@ -16,7 +16,8 @@
     "component/events": "*",
     "component/trim": "*",
     "ianstormtaylor/history": "*",
-    "visionmedia/superagent": "*"
+    "visionmedia/superagent": "*",
+    "visionmedia/debug": "*"
   },
   "local": [
     "acorn",

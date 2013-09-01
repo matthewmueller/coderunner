@@ -32,6 +32,7 @@
     "extend.js": "0.0.1",
     "engine.io": "~0.6.3",
     "axon": "~0.6.1",
-    "shell-escape": "0.0.1"
+    "shell-escape": "0.0.1",
+    "cached-readfile": "0.0.1"
   }
 }

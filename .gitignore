@@ -5,6 +5,7 @@ components
 node_modules
 logs
 pids
+cids
 .vagrant
 scripts
 *.swp

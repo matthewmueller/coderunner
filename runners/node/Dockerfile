@@ -13,8 +13,3 @@ run    apt-get install -y make python g++
 run    apt-get install -y curl
 run    curl http://nodejs.org/dist/v0.10.13/node-v0.10.13-linux-x64.tar.gz | tar -C /usr/local/ --strip-components=1 -zxv
 
-# Entry entrypoint
-entrypoint    ["node"]
-
-# add a default
-cmd    ["--help"]
