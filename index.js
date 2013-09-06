@@ -107,17 +107,13 @@ server.listen(port, function() {
  * Graceful shutdown
  */
 
-function shutdown() {
-  console.log('closing...');
-  server.close();
-  // redis.client.quit();
-
-  // arbitrary 2 seconds
-  setTimeout(function() {
-    console.log('closed');
-    process.exit(0);
-  }, 2000);
-}
+process.on('SIGQUIT', function(){
+  console.log('server: shutting down');
+  server.close(function(){
+    console.log('server: exiting');
+    process.exit();
+  });
+});
 
 process.on('SIGTERM', shutdown);
 process.on('SIGQUIT', shutdown);

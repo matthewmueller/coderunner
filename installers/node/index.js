@@ -30,7 +30,22 @@ app.post('/install/:dep', function(req, res, next) {
   });
 });
 
-/** 
+/**
+ * Graceful shutdown
+ */
+
+function shutdown() {
+  console.log('server: shutting down');
+  server.close(function(){
+    console.log('server: exiting');
+    process.exit();
+  });
+}
+
+process.on('SIGTERM', shutdown);
+process.on('SIGQUIT', shutdown);
+
+/* 
  * Bind to a port
  */
 
