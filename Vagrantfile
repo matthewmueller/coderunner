@@ -62,6 +62,9 @@ Vagrant.configure("2") do |config|
       "apt-get install -y curl;" \
       "curl http://nodejs.org/dist/v0.10.13/node-v0.10.13-linux-x64.tar.gz | tar -C /usr/local/ --strip-components=1 -zxv;"
 
+    # Install mon
+    pkg_cmd << "mkdir /tmp/mon && cd /tmp/mon && curl -L# https://github.com/visionmedia/mon/archive/master.tar.gz | tar zx --strip 1 && make install"
+
     # Install global dependencies
     pkg_cmd << "npm install -g component;" \
       "npm install -g node-gyp;" \
