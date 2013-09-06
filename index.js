@@ -107,13 +107,13 @@ server.listen(port, function() {
  * Graceful shutdown
  */
 
-process.on('SIGQUIT', function(){
+function shutdown() {
   console.log('server: shutting down');
   server.close(function(){
     console.log('server: exiting');
     process.exit();
   });
-});
+}
 
 process.on('SIGTERM', shutdown);
 process.on('SIGQUIT', shutdown);
