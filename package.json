@@ -14,7 +14,7 @@
     "rework-variant": "~0.2.0",
     "debug": "~0.7.2",
     "modella": "~0.1.2",
-    "modella-leveldb": "0.0.3",
+    "modella-leveldb": "0.0.4",
     "connect-redis": "~1.4.5",
     "every.js": "0.0.5",
     "emitter-component": "~1.0.1",
