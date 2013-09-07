@@ -11,7 +11,7 @@
   "dependencies": {
     "benatkin/codemirror": "*",
     "benatkin/codemirror-mode-javascript": "*",
-    "matthewmueller/debounce": "*",
+    "component/debounce": "*",
     "component/emitter": "*",
     "component/events": "*",
     "component/trim": "*",
