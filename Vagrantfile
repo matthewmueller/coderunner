@@ -64,6 +64,9 @@ Vagrant.configure("2") do |config|
 
     # Install mon
     pkg_cmd << "mkdir /tmp/mon && cd /tmp/mon && curl -L# https://github.com/visionmedia/mon/archive/master.tar.gz | tar zx --strip 1 && make install"
+    
+    # Install spot
+    pkg_cmd << "curl -L https://raw.github.com/guille/spot/master/spot.sh -o /usr/local/bin/spot && chmod +x /usr/local/bin/spot"
 
     # Install global dependencies
     pkg_cmd << "npm install -g component;" \
