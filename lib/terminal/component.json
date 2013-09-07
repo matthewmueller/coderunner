@@ -5,11 +5,9 @@
   "main" : "terminal.js",
   "scripts" : [ "terminal.js" ],
   "styles" : [ "terminal.styl" ],
-  "templates": [ "template.jade" ],
   "dependencies": {
     "component/domify": "*",
-    "visionmedia/superagent": "*",
-    "component/emitter": "*",
-    "matthewmueller/terminal": "*"
+    "component/classes": "*",
+    "samsonjs/format": "*"
   }
 }

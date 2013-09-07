@@ -9,7 +9,6 @@
     "visionmedia/superagent": "*",
     "visionmedia/page.js": "*",
     "ianstormtaylor/history": "*",
-    "matthewmueller/terminal": "*",
     "component/classes": "*",
     "component/trim": "*",
     "matthewmueller/ligature-symbols": "*",
@@ -20,6 +19,7 @@
     "io",
     "editor",
     "container",
-    "script"
+    "script",
+    "terminal"
   ]
 }
