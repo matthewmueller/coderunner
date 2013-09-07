@@ -19,7 +19,6 @@
   "local": [
     "io",
     "editor",
-    "container",
     "script",
     "terminal"
   ]
