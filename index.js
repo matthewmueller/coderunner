@@ -42,10 +42,6 @@ app.configure('development', function(){
 
 app.use(express.static(__dirname + '/build'));
 
-// Needs to be above req.session because of the way sessions work
-// See: https://github.com/senchalabs/connect/issues/854
-app.use(require('container'));
-
 /**
  * Session support
  */
@@ -72,7 +68,6 @@ app.use(function(req, res, next) {
  * Mount
  */
 
-// TODO: is this even necessary anymore?
 app.use(require('script/api'));
 
 IO.on('install', require('install'));
