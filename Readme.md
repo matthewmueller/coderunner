@@ -6,6 +6,8 @@ Run server-side code in the browser. Automatic dependency installation. Live cod
 
 ![coderunner](https://i.cloudup.com/bBH1cQRZ6W.gif)
 
+> Less janky [demo](https://cloudup.com/itpREoH439e)
+
 ## Design Goals
 
 #### Secure
