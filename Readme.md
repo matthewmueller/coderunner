@@ -80,12 +80,12 @@ Vagrant will download and install an ubuntu virtual machine containing:
 
 This code is still in it's infancy. There's lots to do. Here's a few things I'd like to add:
 
-### Docker
+#### Docker
 
 - Better resource limiting in docker (memory, storage, & network)
 - Better docker signal support (hopefully coming in docker 0.7, see [here](http://blog.docker.io/2013/08/websockets-dockerfile-upgrade-better-registry-support-expert-mode-and-more/).)
 
-### Features
+#### Features
 
 - Easier language interface
 - More languages
