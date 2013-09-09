@@ -72,6 +72,10 @@ Vagrant.configure("2") do |config|
       "npm install -g mongroup;" \
       "npm install -g node-dev;"
 
+    # Install coderunner from master running as vagrant user
+    pkg_cmd << "sudo -u vagrant git clone https://github.com/MatthewMueller/coderunner.git ~/coderunner;" \
+      "sudo -u vagrant cd ~/coderunner; make;"
+
     # Activate new kernel
     pkg_cmd << "shutdown -r +1; "
     config.vm.provision :shell, :inline => pkg_cmd
