@@ -1,6 +1,6 @@
 # coderunner
 
-Run server-side code in the browser. Automatic dependency installation. Live code execution. Powered by [docker](http://docker.io).
+Run server-side code in the browser. Automatic dependency installation. Live code execution. Revision support. Powered by [docker](http://docker.io).
 
 ## Demo
 
