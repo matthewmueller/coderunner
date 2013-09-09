@@ -31,17 +31,15 @@ Vagrant.configure("2") do |config|
   # Provision docker and new kernel if deployment was not done
   if Dir.glob("#{File.dirname(__FILE__)}/.vagrant/machines/default/*/id").empty?
     # Add lxc-docker package
-    pkg_cmd = "apt-get update -qq; apt-get install -q -y python-software-properties; " \
-      "add-apt-repository -y ppa:dotcloud/lxc-docker; apt-get update -qq; " \
-      "apt-get install -q -y lxc-docker; "
-    # Add X.org Ubuntu backported 3.8 kernel
-    pkg_cmd << "add-apt-repository -y ppa:ubuntu-x-swat/r-lts-backport; " \
-      "apt-get update -qq; apt-get install -q -y linux-image-3.8.0-19-generic; "
-    # Add guest additions if local vbox VM
-    is_vbox = true
-    ARGV.each do |arg| is_vbox &&= !arg.downcase.start_with?("--provider") end
-    if is_vbox
-      pkg_cmd << "apt-get install -q -y linux-headers-3.8.0-19-generic dkms; " \
+    pkg_cmd = "wget -q -O - https://get.docker.io/gpg | apt-key add -;" \
+      "echo deb http://get.docker.io/ubuntu docker main > /etc/apt/sources.list.d/docker.list;" \
+      "apt-get update -qq; apt-get install -q -y --force-yes lxc-docker; "
+    # Add Ubuntu raring backported kernel
+    pkg_cmd << "apt-get update -qq; apt-get install -q -y linux-image-generic-lts-raring; "
+    # Add guest additions if local vbox VM. As virtualbox is the default provider,
+    # it is assumed it won't be explicitly stated.
+    if ENV["VAGRANT_DEFAULT_PROVIDER"].nil? && ARGV.none? { |arg| arg.downcase.start_with?("--provider") }
+      pkg_cmd << "apt-get install -q -y linux-headers-generic-lts-raring dkms; " \
         "echo 'Downloading VBox Guest Additions...'; " \
         "wget -q http://dlc.sun.com.edgesuite.net/virtualbox/4.2.12/VBoxGuestAdditions_4.2.12.iso; "
       # Prepare the VM to add guest additions after reboot
@@ -64,7 +62,7 @@ Vagrant.configure("2") do |config|
 
     # Install mon
     pkg_cmd << "mkdir /tmp/mon && cd /tmp/mon && curl -L# https://github.com/visionmedia/mon/archive/master.tar.gz | tar zx --strip 1 && make install"
-    
+
     # Install spot
     pkg_cmd << "curl -L https://raw.github.com/guille/spot/master/spot.sh -o /usr/local/bin/spot && chmod +x /usr/local/bin/spot"
 
