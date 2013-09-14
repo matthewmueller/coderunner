@@ -74,7 +74,7 @@ Vagrant.configure("2") do |config|
 
     # Install coderunner from master running as vagrant user
     pkg_cmd << "sudo -u vagrant git clone https://github.com/MatthewMueller/coderunner.git ~/coderunner;" \
-      "sudo -u vagrant cd ~/coderunner; make;"
+      "sudo -u vagrant cd ~/coderunner; make images; make;"
 
     # Activate new kernel
     pkg_cmd << "shutdown -r +1; "
