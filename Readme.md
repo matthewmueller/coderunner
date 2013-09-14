@@ -4,7 +4,7 @@ Run server-side code in the browser. Automatic dependency installation. Live cod
 
 ## Demo
 
-![coderunner](https://i.cloudup.com/bBH1cQRZ6W.gif)
+![coderunner](https://i.cloudup.com/MBOXrwMRNl.gif)
 
 > Less janky [demo](https://cloudup.com/itpREoH439e)
 
