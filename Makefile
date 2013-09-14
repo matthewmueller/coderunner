@@ -1,15 +1,19 @@
 SRC = $(wildcard lib/*/*.js)
 JSON = $(wildcard lib/*/component.json)
+IMAGES = $(wildcard images/*)
 
 install: components $(SRC)
+	@mkdir -p ~/data ~/scripts
+	@mkdir -p pids logs cids
 	@npm -s install
 	@./lib/build/builder
 
 components: component.json $(JSON)
 	@component install
 
-image:
-	docker build -t fe .
+images: $(IMAGES)
+	@docker build -t node-runner images/node-runner
+	@docker build -t node-installer images/node-installer
 
 minify: minify-js
 
