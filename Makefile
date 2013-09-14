@@ -2,6 +2,8 @@ SRC = $(wildcard lib/*/*.js)
 JSON = $(wildcard lib/*/component.json)
 
 install: components $(SRC)
+	@mkdir -p ~/data ~/scripts
+	@mkdir -p pids logs cids
 	@npm -s install
 	@./lib/build/builder
 

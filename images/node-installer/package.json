@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "private": "true",
   "dependencies": {
+    "express": "~3.4.0",
     "shell-escape": "0.0.1",
     "debug": "~0.7.2",
     "axon": "~0.6.1"
