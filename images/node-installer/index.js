@@ -7,6 +7,7 @@ var args = process.argv.slice(2);
 var port = args[0] || 3000;
 var express = require('express');
 var app = module.exports = express();
+var server = require('http').createServer(app);
 var exec = require('child_process').exec;
 var escape = require('shell-escape');
 
@@ -64,6 +65,6 @@ process.on('SIGQUIT', shutdown);
  * Bind to a port
  */
 
-app.listen(port, function() {
+server.listen(port, function() {
   console.log('listening on port: %s', port);
 });
