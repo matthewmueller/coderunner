@@ -33,6 +33,7 @@
     "axon": "~0.6.1",
     "shell-escape": "0.0.1",
     "cached-readfile": "0.0.1",
-    "ms": "~0.6.1"
+    "ms": "~0.6.1",
+    "mkdirp": "~0.3.5"
   }
 }
