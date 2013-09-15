@@ -106,7 +106,9 @@ function shutdown() {
   console.log('server: shutting down');
   server.close(function(){
     console.log('server: exiting');
-    process.exit();
+    setTimeout(function() {
+      process.exit();
+    }, 2000);
   });
 }
 
