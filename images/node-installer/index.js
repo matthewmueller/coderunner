@@ -11,14 +11,29 @@ var exec = require('child_process').exec;
 var escape = require('shell-escape');
 
 /**
+ * Core node modules
+ *
+ * List at: https://github.com/joyent/node/blob/master/lib/repl.js#L73
+ */
+
+var core = [ 'assert', 'buffer', 'child_process', 'cluster', 'crypto', 'dgram', 'dns', 
+             'domain', 'events', 'fs', 'http', 'https', 'net', 'os', 'path', 'punycode',
+             'querystring', 'readline', 'stream', 'string_decoder', 'tls', 'tty', 'url',
+             'util', 'vm', 'zlib', 'smalloc'];
+
+var rcore = new RegExp(core.join('|'), 'i');
+
+/**
  * Routes
  */
 
 app.post('/install/:dep', function(req, res, next) {
   var self = this;
   var dep = req.params.dep;
-  var cmd = escape(['npm', 'install', '-s', dep]);
 
+  if (rcore.test(dep)) return res.send(200);
+
+  var cmd = escape(['npm', 'install', '-s', dep]);
   debug('installing %s', dep);
 
   // install the dependency
