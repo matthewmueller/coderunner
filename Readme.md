@@ -6,9 +6,9 @@ Run server-side code quickly and securely in the browser. Automatic dependency i
 
 ## Demo
 
-![coderunner](https://i.cloudup.com/bEHpOfLm7t.gif)
+![coderunner](https://i.cloudup.com/MBOXrwMRNl.gif)
 
-> Less janky [demo](https://i.cloudup.com/bEHpOfLm7t.gif)
+> Less janky [demo](https://cloudup.com/iFxU8BpqLoW)
 
 ## Design Goals
 
