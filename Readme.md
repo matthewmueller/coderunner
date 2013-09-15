@@ -14,7 +14,7 @@ Run server-side code quickly and securely in the browser. Automatic dependency i
 
 #### Secure
 
-Coderunner is designed to be secure. No user script should be able to jump outside its personal sandbox. All scripts run inside an isolated linux container and package installers run in separate, shared linux containers.
+Coderunner is designed to be secure. No user script should be able to jump outside its personal sandbox or modify any other script. All scripts run inside an isolated linux container and package installers run in separate, shared linux containers.
 
 #### Flexible
 
