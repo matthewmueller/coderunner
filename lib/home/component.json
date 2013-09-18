@@ -14,7 +14,7 @@
     "matthewmueller/ligature-symbols": "*",
     "component/event": "*",
     "ianstormtaylor/history": "*",
-    "yields/k": "0.3.0"
+    "yields/k": "*"
   },
   "local": [
     "io",
