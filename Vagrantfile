@@ -73,8 +73,9 @@ Vagrant.configure("2") do |config|
       "npm install -g node-dev;"
 
     # Install coderunner from master running as vagrant user
-    pkg_cmd << "sudo -u vagrant git clone https://github.com/MatthewMueller/coderunner.git ~/coderunner;" \
-      "sudo -u vagrant cd ~/coderunner; make images; make;"
+    pkg_cmd << "sudo -u vagrant git clone https://github.com/MatthewMueller/coderunner.git /home/vagrant/coderunner;" \
+      "cd /home/vagrant/coderunner; make images;" \
+      "sudo -u vagrant cd /home/vagrant/coderunner; make;"
 
     # Activate new kernel
     pkg_cmd << "shutdown -r +1; "

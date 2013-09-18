@@ -42,5 +42,5 @@ mount:
 		-o IdentityFile=~/.vagrant.d/insecure_private_key \
 		-p $$(vagrant ssh-config | grep Port | sed 's/Port //')
 
-.PHONY: build clean minify production
+.PHONY: images build clean minify production
 
