@@ -77,6 +77,9 @@ Vagrant.configure("2") do |config|
       "cd /home/vagrant/coderunner; make images;" \
       "sudo -u vagrant cd /home/vagrant/coderunner; make;"
 
+    # Update the docker socket
+    pkg_cmd << "chown vagrant:vagrant /var/run/docker.sock;"
+
     # Activate new kernel
     pkg_cmd << "shutdown -r +1; "
     config.vm.provision :shell, :inline => pkg_cmd
