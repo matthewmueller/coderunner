@@ -20,6 +20,7 @@
     "io",
     "editor",
     "script",
-    "terminal"
+    "terminal",
+    "conf"
   ]
 }

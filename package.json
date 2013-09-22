@@ -27,11 +27,12 @@
     "request": "~2.25.0",
     "jade": "~0.34.1",
     "io-server": "0.0.4",
-    "extend.js": "0.0.1",
     "engine.io": "~0.6.3",
     "shell-escape": "0.0.1",
     "cached-readfile": "0.0.1",
     "ms": "~0.6.1",
-    "mkdirp": "~0.3.5"
+    "mkdirp": "~0.3.5",
+    "c.js": "*",
+    "optimist": "~0.6.0"
   }
 }

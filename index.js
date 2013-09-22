@@ -2,14 +2,17 @@
  * Module dependencies.
  */
 
-var port = process.argv[2] || 8080;
+var path = require('path');
+var join = path.join;
 var express = require('express');
 var app = module.exports = express();
 var server = require('http').createServer(app);
 var Session = require('connect-leveldb2')(express);
 var engine = require('engine.io');
 var IO = require('io-server');
-var config = require('config');
+var conf = require('conf');
+var args = require('args');
+var port = args.port || 8080;
 
 /**
  * Set up engine.io
@@ -46,9 +49,9 @@ app.use(express.static(__dirname + '/build'));
  * Session support
  */
 
-var dbdir = config('db path');
+var dbdir = conf['db path'];
 var session = new Session({
-  dbLocation: dbdir + 'sessions',
+  dbLocation: join(dbdir, 'sessions'),
   ttl : 60 * 60 // 1hr
 });
 

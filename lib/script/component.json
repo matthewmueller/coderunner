@@ -4,6 +4,7 @@
   "description": "script model",
   "main": "model.js",
   "scripts": ["model.js"],
+  "local": [ "conf" ],
   "dependencies": {
     "modella/modella" : "*",
     "modella/ajax": "*",

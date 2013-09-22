@@ -9,3 +9,4 @@ cids
 .vagrant
 scripts
 *.swp
+lib/config/personal
