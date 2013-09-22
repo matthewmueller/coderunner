@@ -88,6 +88,9 @@ app.configure('development', function() {
 
 // TODO: make more user-friendly & log
 app.configure('production', function() {
+  // build once
+  require('build/builder');
+
   app.use(function(err, req, res, next) {
     res.redirect('/');
   });
