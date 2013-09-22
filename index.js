@@ -7,7 +7,7 @@ var join = path.join;
 var express = require('express');
 var app = module.exports = express();
 var server = require('http').createServer(app);
-var Session = require('connect-leveldb2')(express);
+var Session = require('connect-leveldb')(express);
 var engine = require('engine.io');
 var IO = require('io-server');
 var conf = require('conf');

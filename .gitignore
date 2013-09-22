@@ -9,4 +9,5 @@ cids
 .vagrant
 scripts
 *.swp
-lib/config/personal
+lib/config/private.js
+lib/config/client.js
