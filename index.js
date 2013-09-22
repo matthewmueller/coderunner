@@ -10,6 +10,7 @@ var server = require('http').createServer(app);
 var Session = require('connect-leveldb')(express);
 var engine = require('engine.io');
 var IO = require('io-server');
+var build = require('build').build;
 var conf = require('conf');
 var args = require('args');
 var port = args.port || 8080;
@@ -89,7 +90,9 @@ app.configure('development', function() {
 // TODO: make more user-friendly & log
 app.configure('production', function() {
   // build once
-  require('build/builder');
+  build(function(err) {
+    if (err) throw(err);
+  });
 
   app.use(function(err, req, res, next) {
     res.redirect('/');
