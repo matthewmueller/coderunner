@@ -31,7 +31,7 @@ es.on('connection', IO);
  * Configuration
  */
 
-app.use(express.favicon());
+app.use(express.favicon(__dirname + '/favicon.ico'));
 app.use(express.bodyParser());
 app.use('/engine.io', es.handleRequest.bind(es));
 
