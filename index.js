@@ -59,7 +59,7 @@ var session = new Session({
 app.use(express.cookieParser());
 app.use(express.session({
   store: session,
-  secret: 'leveldb sweetness'
+  secret: conf['session secret'] || 'leveldb secret'
 }));
 
 // session defaults
