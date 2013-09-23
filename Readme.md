@@ -1,5 +1,7 @@
 # coderunner
 
+![coderunner](https://i.cloudup.com/gCqIeOJSJY.png)
+
 http://coderunner.io
 
 Run server-side code quickly and securely in the browser. Automatic dependency installation. Live code execution. Transparent revisioning. Powered by [docker](http://docker.io).
@@ -7,8 +9,6 @@ Run server-side code quickly and securely in the browser. Automatic dependency i
 ## Demo
 
 ![coderunner](https://i.cloudup.com/MBOXrwMRNl.gif)
-
-> Less janky [demo](https://cloudup.com/iFxU8BpqLoW)
 
 ## Design Goals
 
@@ -33,6 +33,36 @@ Coderunner is designed to support many languages. Currently, Node.js is the only
 One of the upcoming goals of coderunner is to be more extendable. The script execution should be separated from the front-end allowing coderunner to support a variety of different products.
 
 ## Development
+
+### Local without docker (easy, insecure)
+
+1. Install coderunner locally
+
+    `git clone https://github.com/matthewmueller/coderunner`
+
+2. Change directory into `coderunner`
+
+    `cd ~/coderunner`
+
+3. Install node modules & [components](http://github.com/visionmedia/component):
+
+    `make install`
+
+4. Build all the docker images
+
+    `make images`
+
+5. Start the node-installer (using [mongroup](http://github.com/visionmedia/node-mongroup))
+
+    `mongroup start node-installer`
+
+> If you don't have mongroup, you can look in the `mongroup.conf` for the original command.
+
+6. Start the server
+
+    `node index.js --no-docker`
+
+### With docker (more steps, secure)
 
 In order to develop docker locally, you'll need to install VirtualBox, Vagrant and Git.
 
@@ -72,19 +102,29 @@ Vagrant will download and install an ubuntu virtual machine containing:
 
     `make install`
 
-10. Start the node-installer (using [mongroup](http://github.com/visionmedia/node-mongroup))
+10. Build all the docker images
+
+    `make images`
+
+11. Start the node-installer (using [mongroup](http://github.com/visionmedia/node-mongroup))
 
     `mongroup start node-installer`
 
-10. Start node server (use `node-dev index.js` if you want to autorestart on save)
+12. Start node server (use `node-dev index.js` if you want to autorestart on save)
 
     `node index.js`
 
-11. Go to [http://localhost:8080](http://localhost:8080)
+13. Go to [http://localhost:8080](http://localhost:8080)
 
 ## Icons to add to your page
 
 ![coderunner](https://i.cloudup.com/m1TVtFGGyk.png)
+
+## Adding other languages
+
+Coderunner makes it easy to add new languages. You will need to create two docker images, one for running and one for installing. The install container needs to be a web server that shares the installations volume (in node, `node_modules`) with all the runner container instances.
+
+Take a look at [images/](https://github.com/MatthewMueller/coderunner/tree/master/images) for an example of how to add another language.
 
 ## TODO
 
