@@ -2,7 +2,7 @@
 
 http://coderunner.io
 
-jsbin for server-side languages. Run server-side code quickly and securely in the browser. Automatic dependency installation. Live code execution. Transparent revisioning. Powered by [docker](http://docker.io).
+[JSbin](http://jsbin.com) for server-side languages. Run server-side code quickly and securely in the browser. Automatic dependency installation. Live code execution. Transparent revisioning. Powered by [docker](http://docker.io).
 
 ![coderunner](https://i.cloudup.com/gCqIeOJSJY.png)
 
