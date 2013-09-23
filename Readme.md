@@ -1,10 +1,10 @@
 # coderunner
 
-![coderunner](https://i.cloudup.com/gCqIeOJSJY.png)
-
 http://coderunner.io
 
 Run server-side code quickly and securely in the browser. Automatic dependency installation. Live code execution. Transparent revisioning. Powered by [docker](http://docker.io).
+
+![coderunner](https://i.cloudup.com/gCqIeOJSJY.png)
 
 ## Demo
 
