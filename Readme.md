@@ -122,7 +122,7 @@ Vagrant will download and install an ubuntu virtual machine containing:
 
 To add coderunner to your project, you can add the following icon pointing to your script:
 
-    `[![coderunner](https://i.cloudup.com/m1TVtFGGyk.png)](http://coderunner.io/:id/:revision)`
+    [![coderunner](https://i.cloudup.com/m1TVtFGGyk.png)](http://coderunner.io/:id/:revision)
 
 ## Adding other languages
 
