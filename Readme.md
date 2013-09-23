@@ -62,7 +62,7 @@ One of the upcoming goals of coderunner is to be more extendable. The script exe
 
     `node index.js --no-docker`
 
-### With docker (more steps, secure)
+### VM with docker (more steps, secure)
 
 In order to develop docker locally, you'll need to install VirtualBox, Vagrant and Git.
 
