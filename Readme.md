@@ -71,14 +71,14 @@ In order to develop docker locally, you'll need to install VirtualBox, Vagrant a
 
     `vagrant up`
 
-Vagrant will download and install an ubuntu virtual machine containing:
+  Vagrant will download and install an ubuntu virtual machine containing:
 
-  - ubuntu 12.04
-  - docker
-  - git
-  - npm
-  - node.js
-  - coderunner
+    - ubuntu 12.04
+    - docker
+    - git
+    - npm
+    - node.js
+    - coderunner
 
 7. SSH into VM
 
