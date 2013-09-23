@@ -82,6 +82,10 @@ Vagrant will download and install an ubuntu virtual machine containing:
 
 11. Go to [http://localhost:8080](http://localhost:8080)
 
+## Icons to add to your page
+
+![coderunner](https://i.cloudup.com/F9JlCCwH9k.png)
+
 ## TODO
 
 This code is still in it's infancy. There's lots to do. Here's a few things I'd like to add:
