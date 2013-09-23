@@ -84,7 +84,7 @@ Vagrant will download and install an ubuntu virtual machine containing:
 
 ## Icons to add to your page
 
-![coderunner](https://i.cloudup.com/5CWnAOhLeK.png)
+![coderunner](https://i.cloudup.com/MgKbmQNwIi.png)
 
 ## TODO
 
