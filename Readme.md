@@ -48,16 +48,6 @@ One of the upcoming goals of coderunner is to be more extendable. The script exe
 
     `make install`
 
-4. Build all the docker images
-
-    `make images`
-
-5. Start the node-installer (using [mongroup](http://github.com/visionmedia/node-mongroup))
-
-    `mongroup start node-installer`
-
-    > If you don't have mongroup, you can look in the `mongroup.conf` for the original command.
-
 6. Start the server
 
     `node index.js --no-docker`
