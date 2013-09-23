@@ -116,13 +116,16 @@ Vagrant will download and install an ubuntu virtual machine containing:
 
 13. Go to [http://localhost:8080](http://localhost:8080)
 
-## Icons to add to your page
+## Run code from your project
 
-[![coderunner](https://i.cloudup.com/m1TVtFGGyk.png)](http://coderunner.io/sw2s3ov6/2)
 
 To add coderunner to your project, you can add the following icon pointing to your script:
 
     [![coderunner](https://i.cloudup.com/m1TVtFGGyk.png)](http://coderunner.io/:id/:revision)
+
+Yielding:
+
+[![coderunner](https://i.cloudup.com/m1TVtFGGyk.png)](http://coderunner.io/sw2s3ov6/2)
 
 ## Adding other languages
 
