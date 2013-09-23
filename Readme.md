@@ -14,7 +14,7 @@ http://coderunner.io
 
 #### ⎈ Secure
 
-Coderunner is designed to be secure. No user script should be able to jump outside its personal sandbox or modify any other script. All scripts run inside an isolated linux container and package installers run in separate, shared linux containers.
+Coderunner is designed to be secure. No user script should be able to jump outside its personal sandbox or modify any other script. All scripts run inside an isolated linux container and each package installer runs in a separate, shared linux container.
 
 #### ✈ Fast
 
