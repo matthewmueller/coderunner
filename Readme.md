@@ -12,23 +12,23 @@ http://coderunner.io
 
 ## Design Goals
 
-#### Secure
+#### ⎈ Secure
 
 Coderunner is designed to be secure. No user script should be able to jump outside its personal sandbox or modify any other script. All scripts run inside an isolated linux container and package installers run in separate, shared linux containers.
 
-#### Flexible
+#### ❁ Flexible
 
 Many server-side script runners remove features of the language in order to keep the system secure. This makes the language much less powerful. With Coderunner, you have full access to everything the language provides.
 
-#### Fast
+#### ✈ Fast
 
 Coderunner is designed to provide immediate feedback. Most script runners use VMs to run server-side code securely. VMs are slow and CPU-intensive. Linux containers are fast and light-weight, offering the same kind of security that a VM provides.
 
-#### Multilingual
+#### ☯ Multilingual
 
 Coderunner is designed to support many languages. Currently, Node.js is the only supported language, but it should be trivial to add additional scripting languages like Python, Ruby, PHP, etc.
 
-#### Extendable
+#### ❖ Extendable
 
 One of the upcoming goals of coderunner is to be more extendable. The script execution should be separated from the front-end allowing coderunner to support a variety of different products.
 
