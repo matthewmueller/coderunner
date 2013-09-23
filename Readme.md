@@ -56,7 +56,7 @@ One of the upcoming goals of coderunner is to be more extendable. The script exe
 
     `mongroup start node-installer`
 
-> If you don't have mongroup, you can look in the `mongroup.conf` for the original command.
+    > If you don't have mongroup, you can look in the `mongroup.conf` for the original command.
 
 6. Start the server
 
