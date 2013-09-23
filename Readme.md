@@ -16,13 +16,13 @@ http://coderunner.io
 
 Coderunner is designed to be secure. No user script should be able to jump outside its personal sandbox or modify any other script. All scripts run inside an isolated linux container and package installers run in separate, shared linux containers.
 
-#### ❁ Flexible
-
-Many server-side script runners remove features of the language in order to keep the system secure. This makes the language much less powerful. With Coderunner, you have full access to everything the language provides.
-
 #### ✈ Fast
 
 Coderunner is designed to provide immediate feedback. Most script runners use VMs to run server-side code securely. VMs are slow and CPU-intensive. Linux containers are fast and light-weight, offering the same kind of security that a VM provides.
+
+#### ❁ Flexible
+
+Many server-side script runners remove features of the language in order to keep the system secure. This makes the language much less powerful. With Coderunner, you have full access to everything the language provides.
 
 #### ☯ Multilingual
 
