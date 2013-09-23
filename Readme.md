@@ -30,8 +30,8 @@ Coderunner is designed to support many languages. Currently, Node.js is the only
 
 #### ❖ Extendable
 
-One of the upcoming goals of coderunner is to be more extendable. The script execution should be separated from the front-end allowing coderunner to support a variety of different products.
-
+One of the upcoming goals of coderunner is to be more extendable by separating the API from the frontend.
+gp
 ## Development
 
 ### Local without docker (easy, insecure)
