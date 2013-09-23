@@ -11,3 +11,4 @@ scripts
 *.swp
 lib/conf/private.js
 lib/conf/client.js
+assets
