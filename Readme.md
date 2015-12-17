@@ -2,7 +2,7 @@
 
 http://coderunner.io
 
-[JSbin](http://jsbin.com) for server-side languages. Run server-side code quickly and securely in the browser. Automatic dependency installation. Live code execution. Transparent revisioning. Powered by [docker](http://docker.io).
+[JSbin](http://jsbin.com) for server-side languages. Run server-side code quickly and securely in the browser. Automatic dependency installation. Live code execution. Transparent revisioning. Powered by [docker](https://www.docker.com/).
 
 ![coderunner](https://i.cloudup.com/gCqIeOJSJY.png)
 
@@ -44,7 +44,7 @@ One of the upcoming goals of coderunner is to be more extendable by separating t
 
     `cd ~/coderunner`
 
-3. Install node modules & [components](http://github.com/visionmedia/component):
+3. Install node modules & [components](https://github.com/visionmedia/component):
 
     `make install`
 
@@ -57,7 +57,7 @@ One of the upcoming goals of coderunner is to be more extendable by separating t
 In order to develop docker locally, you'll need to install VirtualBox, Vagrant and Git.
 
 1. Install virtualbox from https://www.virtualbox.org/ (or use your package manager)
-2. Install vagrant from http://www.vagrantup.com/ (or use your package manager)
+2. Install vagrant from https://www.vagrantup.com/ (or use your package manager)
 3. Install git if you had not installed it before, check if it is installed by running git in a terminal window
 4. Install coderunner locally:
 
@@ -96,7 +96,7 @@ In order to develop docker locally, you'll need to install VirtualBox, Vagrant a
 
     `make images`
 
-11. Start the node-installer (using [mongroup](http://github.com/visionmedia/node-mongroup))
+11. Start the node-installer (using [mongroup](https://github.com/tj/node-mongroup))
 
     `mongroup start node-installer`
 
@@ -130,7 +130,7 @@ This code is still in it's infancy. There's lots to do. Here's a few things I'd 
 #### Docker
 
 - Better resource limiting in docker (memory, storage, & network)
-- Better docker signal support (hopefully coming in docker 0.7, see [here](http://blog.docker.io/2013/08/websockets-dockerfile-upgrade-better-registry-support-expert-mode-and-more/).)
+- Better docker signal support (hopefully coming in docker 0.7, see [here](https://blog.docker.com/2013/08/websockets-dockerfile-upgrade-better-registry-support-expert-mode-and-more/).)
 - Ship coderunner inside docker container ([docker inside docker](https://github.com/jpetazzo/dind/))
 
 #### Features
